@@ -1,0 +1,171 @@
+body, html{
+    width: 100%;
+    height: 92%;
+    margin: 0;
+    padding: 0;
+}
+#dcPlayer{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+    background-color: rgba(247, 223, 203, 1);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+#dcplayerYT {
+    width: 0;
+    height: 0;
+}
+.dcbuttons{
+    height: 80%;
+    width: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+}
+#dcplayPauseBtn, #dcforwardBtn{
+    margin-left: 1%;
+}
+#dcprogress {
+    margin-left: 1%;
+}
+#dcselect{
+    height: 80%;
+    margin-left: 1%;
+    width: 240px;
+    text-align: center;
+    border-radius: 40px;
+    appearance: none;
+    background-color: white;
+}
+#main{
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+@keyframes frameAnimation{
+    0% {
+        box-shadow: 0 0 0 0 rgba(218, 65, 65, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px 10px rgba(218, 65, 65, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(218, 65, 65, 0.7);
+    }
+}
+
+#main::after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    border: 5px outset rgba(218, 65, 65, 0.9);
+    border-radius: 15px;
+    animation: frameAnimation 3s infinite;
+}
+body{
+    background-color: #c0c0c0;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 15%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    color: lightgray;;
+    background-color: rgba(34, 34, 33, 0.9);
+    float: left;
+    overflow: auto;
+}
+aside{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    width: 25%;
+    height: 75%;
+    float: left;
+    color: lightgray;
+    background-color: rgba(40, 34, 33, 0.9);
+    padding: 1%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+article{
+    color: lightgray;;
+    background-color: rgba(40, 34, 33, 0.9);
+    width: 75%;
+    height: 75%;
+    float: left;
+    padding: 1%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+footer{
+    line-height: 0px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    text-align: center;
+    color: lightgray;;
+    background-color: rgba(34, 34, 33, 0.9);
+    width: 100%;
+    height: 5%;
+    float: left;
+    overflow: auto;
+}
+#listT{
+    text-align: center;
+}
+.list{
+    text-align: justify;
+    text-justify: inter-word;
+}
+h2{
+    text-align: center;
+}
+.steps{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+}
+.box{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+table{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+    font-size: large;
+}
+.styleText {
+    width: 70px;
+}
+.boxBtn{
+    width: 100px;
+}
+textarea{
+    width: 800px;
+    height: 300px;
+}

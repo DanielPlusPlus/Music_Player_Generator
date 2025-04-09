@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <title>Music Player Generator for Web</title>
+        <link rel = "stylesheet" href = "style.css"/>
+        <link rel = "preconnect" href = "https://fonts.googleapis.com" />
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+        <link href = "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel = "stylesheet" />
+        <link rel = "icon" type = "image/x-icon" href = "favicon.ico" />
+    </head>
+    <body>
+        <div id="main">
+            <header>
+                <h1>Music Player Generator for your Websites :)</h1>    
+            </header>
+            <aside>
+                <p id = "listT">Steps:</p>
+                <ol>
+                    <li><p class = "list">Design - set the appearance of the player</p></li>
+                    <li><p class = "list">Playlist - select songs</p></li>
+                    <li><p class = "list">Settings - configure other options</p></li>
+                    <li><p class = "list">Yay! - finished code</p></li>
+                </ol>   
+            </aside>
+            <article>
+                <section id = "design" class = "steps">
+                    <h2>Design - set the appearance of the player</h2>
+                    <div class = "box">
+                        <table>
+                            <tr>
+                                <th colspan="3">Choose background colour:</th>
+                            </tr>
+                            <tr>
+                            <td><input type = "radio" name = "colour" value = "red" onchange = "changeBackground()"/>Red</td>
+                            <td><input type = "radio" name = "colour" value = "green" onchange =" changeBackground()"/>Green</td>
+                            <td><input type = "radio" name = "colour" value = "blue" onchange = "changeBackground()"/>Blue</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "colour" value = "cyan" onchange = "changeBackground()"/>Cyan</td>
+                                <td><input type = "radio" name = "colour" value = "pink" onchange = "changeBackground()"/>Pink</td>
+                                <td><input type = "radio" name = "colour" value = "yellow" onchange = "changeBackground()"/>Yellow</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "colour" value = "orange" onchange = "changeBackground()"/>Orange</td>
+                                <td><input type = "radio" name = "colour" value = "white" onchange = "changeBackground()"/>White</td>
+                                <td><input type = "radio" name = "colour" value = "black" onchange = "changeBackground()"/>Black</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="3">Choose border style:</th>
+                            </tr>
+                            <tr>
+                            <td><input type = "radio" name = "border" value = "solid" onchange = "changeBorderStyle()"/>Solid</td>
+                            <td><input type = "radio" name = "border" value = "dashed" onchange = "changeBorderStyle()"/>Dashed</td>
+                            <td><input type = "radio" name = "border" value = "dotted" onchange = "changeBorderStyle()"/>Dotted</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "border" value = "double" onchange = "changeBorderStyle()"/>Double</td>
+                                <td><input type = "radio" name = "border" value = "ridge" onchange = "changeBorderStyle()"/>Ridge</td>
+                                <td><input type = "radio" name = "border" value = "inset" onchange = "changeBorderStyle()"/>Inset</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "border" value = "outset" onchange = "changeBorderStyle()"/>Outset</td>
+                                <td><input type = "radio" name = "border" value = "none" onchange = "changeBorderStyle()"/>None</td>
+                                <td><input type = "radio" name = "border" value = "hidden" onchange = "changeBorderStyle()"/>Hidden</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="3">Choose border colour:</th>
+                            </tr>
+                            <tr>
+                            <td><input type = "radio" name = "bcolour" value = "red" onchange = "changeBorderColor()"/>Red</td>
+                            <td><input type = "radio" name = "bcolour" value = "green" onchange = "changeBorderColor()"/>Green</td>
+                            <td><input type = "radio" name = "bcolour" value = "blue" onchange = "changeBorderColor()"/>Blue</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "bcolour" value = "cyan" onchange = "changeBorderColor()"/>Cyan</td>
+                                <td><input type = "radio" name = "bcolour" value = "pink" onchange = "changeBorderColor()"/>Pink</td>
+                                <td><input type = "radio" name = "bcolour" value = "yellow" onchange = "changeBorderColor()"/>Yellow</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "bcolour" value = "orange" onchange = "changeBorderColor()"/>Orange</td>
+                                <td><input type = "radio" name = "bcolour" value = "white" onchange = "changeBorderColor()"/>White</td>
+                                <td><input type = "radio" name = "bcolour" value = "black" onchange = "changeBorderColor()"/>Black</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="3">Choose buttons colour:</th>
+                            </tr>
+                            <tr>
+                            <td><input type = "radio" name = "btncolour" value = "red" onchange = "changeBtnColor()"/>Red</td>
+                            <td><input type = "radio" name = "btncolour" value = "green" onchange = "changeBtnColor()"/>Green</td>
+                            <td><input type = "radio" name = "btncolour" value = "blue" onchange = "changeBtnColor()"/>Blue</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "btncolour" value = "cyan" onchange = "changeBtnColor()"/>Cyan</td>
+                                <td><input type = "radio" name = "btncolour" value = "pink" onchange = "changeBtnColor()"/>Pink</td>
+                                <td><input type = "radio" name = "btncolour" value = "yellow" onchange = "changeBtnColor()"/>Yellow</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "radio" name = "btncolour" value = "orange" onchange = "changeBtnColor()"/>Orange</td>
+                                <td><input type = "radio" name = "btncolour" value = "white" onchange = "changeBtnColor()"/>White</td>
+                                <td><input type = "radio" name = "btncolour" value = "black" onchange = "changeBtnColor()"/>Black</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class = "box">
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick = "screenPlaylist()">Next ></button></th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section id = "playlist" class = "steps">
+                    <h2>Playlist - select songs</h2>
+                    <div class = "box">
+                        <table id = "tab">
+                            <tr>
+                                <th>ID</th>
+                                <th>Song title:</th>
+                                <th>Song URL:</th>
+                            </tr>
+                            <tr>
+                                <td>1.</td>
+                                <td><input type = "text" class="titleInput" maxlength="20"/></td> 
+                                <td><input type = "text" placeholder = "Youtube Link" class="urlInput" maxlength="100"/></td> 
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td><input type = "text" class="titleInput" maxlength="20"/></td> 
+                                <td><input type = "text" placeholder = "Youtube Link" class="urlInput" maxlength="100"/></td> 
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td><input type = "text" class="titleInput" maxlength="20"/></td> 
+                                <td><input type = "text" placeholder = "Youtube Link" class="urlInput" maxlength="100"/></td> 
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td><input type = "text" class="titleInput" maxlength="20"/></td> 
+                                <td><input type = "text" placeholder = "Youtube Link" class="urlInput" maxlength="100"/></td> 
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td><input type = "text" class="titleInput" maxlength="20"/></td> 
+                                <td><input type = "text" placeholder = "Youtube Link" class="urlInput" maxlength="100"/></td> 
+                            </tr>
+                        </table>
+                    </div>
+                    <div class = "box">
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick = "screenDesign()">< Previous</button></th>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick = "addNew()">Add new</button></th>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick = "screenSettings()">Next ></button></th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section id = "settings" class = "steps">
+                    <h2>Settings - configure other options</h2>
+                    <div class = "box">
+                        <table>
+                            <tr>
+                                <td><input type = "checkbox" id = "autoPlay"/></td>
+                                <td>Auto Play</td>
+                            </tr>
+                            <tr>
+                                <td><input type = "checkbox" id = "repeatSongs"/></td>
+                                <td>Repeat Songs</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class = "box">
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick = "screenPlaylist()">< Previous</button></th>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick = "screenCode(); generateCode()">Next ></button></th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section id = "code" class = "steps">
+                    <div class = "box">
+                        <table>
+                            <tr>
+                                <th>Completed code: </th>
+                            </tr>
+                            <tr>
+                                <td><textarea id = "printedCode" readonly>Code</textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class = "box">
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick="screenSettings()">< Previous</button></th>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th><button class = "boxBtn" onclick="refreshPage()">Go to Main</button></th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </article>
+            <footer>
+                <h3>The author: <a href = "https://github.com/DanielPlusPlus/" target = "_blank">DanielPlusPlus</a></h3>
+            </footer>
+        </div>
+        <div id = "dcplayerYT">
+            
+        </div>
+        <div id = "dcPlayer">
+            <button class = "dcbuttons" id="dcrewindBtn" title = "Rewind">&#9664;</button>
+            <button class = "dcbuttons" id="dcplayPauseBtn" title = "Play">|&#9658;</button>
+            <button class = "dcbuttons" id="dcforwardBtn" title = "Forward">&#9654;</button>
+            <div id="dcprogress">
+                <span id="dccurrentTime">0:00</span>
+                <progress id="dcprogressBar" value="0" max="100"></progress>
+                <span id="dcendTime">0:00</span>
+              </div>
+            <select id = "dcselect" title = "Playlist">
+                <option value="ay4Q5EhiUcM" selected>Revolutionary</option>
+                <option value="kc-a06exTTI">Tristesse</option>
+                <option value="8HI6qgp-FX8">Nocturne</option>
+              </select>
+              <script src="player.js" defer></script>
+              <script src="https://www.youtube.com/iframe_api" defer></script>
+        </div>
+        <script src = "page.js"></script>
+        <script src = "forms.js"></script>
+    </body>
+</html>
